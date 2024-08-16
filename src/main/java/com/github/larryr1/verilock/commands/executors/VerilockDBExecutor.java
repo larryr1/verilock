@@ -1,7 +1,6 @@
 package com.github.larryr1.verilock.commands.executors;
 
 import com.github.larryr1.verilock.Verilock;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -12,8 +11,6 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.PrimitiveIterator;
 
 public class VerilockDBExecutor implements CommandExecutor {
     @Override

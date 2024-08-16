@@ -3,8 +3,8 @@ package com.github.larryr1.verilock.data;
 import java.util.UUID;
 
 public class VerificationPlayer {
-    private UUID uuid;
-    private String identityId;
+    private final UUID uuid;
+    private final String identityId;
 
     public VerificationPlayer(UUID uuid, String identityId) {
         this.uuid = uuid;

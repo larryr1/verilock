@@ -52,6 +52,11 @@ public class TeleportManager {
         Verilock.getInstance().getLogger().info("Using world '" + verificationWorldName + "' as the verification world.");
 
         World spawnWorld = Bukkit.getWorld(spawnWorldName);
+        if (spawnWorld == null) {
+            Verilock.getInstance().getLogger().severe("Bukkit returned null when retrieving the world " + spawnWorldName + ".");
+            Bukkit.getPluginManager().disablePlugin(Verilock.getInstance());
+            return;
+        }
         spawnLocation = spawnWorld.getSpawnLocation();
     }
 

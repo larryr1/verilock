@@ -4,9 +4,7 @@ import com.github.larryr1.verilock.Verilock;
 import com.github.larryr1.verilock.commands.executors.SubCommand;
 import com.github.larryr1.verilock.data.PlayerIdentity;
 import com.github.larryr1.verilock.data.VerificationPlayer;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 

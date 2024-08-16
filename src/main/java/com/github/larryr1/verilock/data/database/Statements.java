@@ -26,12 +26,6 @@ public class Statements {
     public static class Queries {
 
         public static String CreateIdentity = "INSERT INTO identities (id_number, birthday, first_name, last_name, age, grade, house) VALUES (?, ?, ?, ?, ?, ?, ?)";
-        public static String GetLinkedPlayer = """
-            SELECT *
-            FROM players
-            WHERE uuid = ?
-            AND identity_id IS NOT NULL
-            """;
 
         public static String SelectIdentityById = "SELECT * FROM identities WHERE id_number = ? LIMIT 1";
 

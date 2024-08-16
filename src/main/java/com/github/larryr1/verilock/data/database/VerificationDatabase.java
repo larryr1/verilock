@@ -27,7 +27,7 @@ public class VerificationDatabase implements DatabaseInterface {
 
     /**
      * Close the database connection.
-     * @throws SQLException
+     * @throws SQLException An SQLException indicating a database error.
      */
     public void CloseConnection() throws SQLException {
         if (connection != null && !connection.isClosed()) {

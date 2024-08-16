@@ -4,9 +4,6 @@ import com.github.larryr1.verilock.Verilock;
 import com.github.larryr1.verilock.data.PlayerIdentity;
 import com.github.larryr1.verilock.data.VerificationPlayer;
 import com.github.larryr1.verilock.manager.PlayerTimeoutManager;
-import net.luckperms.api.LuckPerms;
-import net.luckperms.api.model.data.DataMutateResult;
-import net.luckperms.api.model.user.User;
 import net.luckperms.api.model.user.UserManager;
 import net.luckperms.api.node.Node;
 import org.bukkit.ChatColor;
@@ -14,8 +11,6 @@ import org.bukkit.Sound;
 import org.bukkit.conversations.ConversationContext;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
-
-import java.util.concurrent.CompletableFuture;
 
 public class VerificationConversationProcessor {
     public static void ProcessConversationResult(ConversationContext context) {

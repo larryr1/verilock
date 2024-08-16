@@ -14,12 +14,15 @@ import org.bukkit.Bukkit;
 import org.bukkit.conversations.ConversationFactory;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.slf4j.LoggerFactory;
 
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.logging.Logger;
 
 public final class Verilock extends JavaPlugin {
 
+    private static final org.slf4j.Logger log = LoggerFactory.getLogger(Verilock.class);
     private static Verilock instance;
     private TeleportManager teleportManager;
     private RegisteredServiceProvider<LuckPerms> permissionProvider;
@@ -46,7 +49,7 @@ public final class Verilock extends JavaPlugin {
         try {
             verificationDatabase = new VerificationDatabase(getDataFolder().getAbsolutePath() + "/VerilockDatabase.db");
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.severe(Arrays.toString(e.getStackTrace()));
             logger.severe("Failed to connect to the database! " + e.getMessage());
             Bukkit.getPluginManager().disablePlugin(this);
         }

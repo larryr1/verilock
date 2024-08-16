@@ -1,6 +1,5 @@
 package com.github.larryr1.verilock.commands.executors.verilock.database.lookup;
 
-import com.github.larryr1.verilock.Verilock;
 import com.github.larryr1.verilock.data.PlayerIdentity;
 import com.github.larryr1.verilock.data.VerificationPlayer;
 import org.bukkit.Bukkit;

@@ -1,15 +1,11 @@
 package com.github.larryr1.verilock.conversation;
 
 import com.github.larryr1.verilock.Verilock;
-import io.papermc.paper.event.player.AsyncChatCommandDecorateEvent;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.conversations.ConversationAbandonedEvent;
 import org.bukkit.conversations.ConversationAbandonedListener;
-import org.bukkit.conversations.ConversationCanceller;
 import org.bukkit.conversations.ConversationContext;
 import org.bukkit.entity.Player;
-import org.jetbrains.annotations.NotNull;
 
 public class VerificationAbandonedHandler implements ConversationAbandonedListener {
 

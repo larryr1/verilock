@@ -3,10 +3,12 @@ package com.github.larryr1.verilock.conversation;
 import org.bukkit.ChatColor;
 import org.bukkit.conversations.ConversationContext;
 import org.bukkit.conversations.ConversationPrefix;
+import org.jetbrains.annotations.NotNull;
 
 public class VerilockPrefix implements ConversationPrefix {
     @Override
-    public String getPrefix(ConversationContext conversationContext) {
+    @NotNull
+    public String getPrefix(@NotNull ConversationContext conversationContext) {
         return new StringBuilder()
             .append(ChatColor.GOLD)
             .append("<")

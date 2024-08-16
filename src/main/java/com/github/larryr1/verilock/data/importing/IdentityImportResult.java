@@ -1,9 +1,9 @@
 package com.github.larryr1.verilock.data.importing;
 
 public class IdentityImportResult {
-    private int identitiesAdded;
-    private int identitiesSkipped;
-    private long msDuration;
+    private final int identitiesAdded;
+    private final int identitiesSkipped;
+    private final long msDuration;
 
     public IdentityImportResult(int identitiesAdded, int identitiesSkipped, long msDuration) {
         this.identitiesAdded = identitiesAdded;

@@ -6,23 +6,16 @@ import com.github.larryr1.verilock.conversation.Messages;
 import com.github.larryr1.verilock.data.PlayerIdentity;
 import com.github.larryr1.verilock.data.VerificationPlayer;
 import com.github.larryr1.verilock.manager.PlayerTimeoutManager;
-import com.github.larryr1.verilock.manager.TeleportManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scheduler.BukkitScheduler;
 
 import java.sql.SQLException;
 
 public class PlayerJoinHandler implements Listener {
-
-    private String verificationWorldName = null;
-
-
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
@@ -39,12 +32,7 @@ public class PlayerJoinHandler implements Listener {
         if (vp.getIdentityId() != null) {
             // Check if player is still in verification world
             if (player.getWorld().getName().equals(Verilock.getInstance().getConfig().getString("verificationWorldName"))) {
-                Bukkit.getScheduler().scheduleSyncDelayedTask(Verilock.getInstance(), new Runnable() {
-                    @Override
-                    public void run() {
-                        Verilock.getInstance().GetTeleportManager().TeleportPlayerToSpawn(player);
-                    }
-                }, 10L);
+                Bukkit.getScheduler().scheduleSyncDelayedTask(Verilock.getInstance(), () -> Verilock.getInstance().GetTeleportManager().TeleportPlayerToSpawn(player), 10L);
 
 
             }

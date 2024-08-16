@@ -1,6 +1,5 @@
 package com.github.larryr1.verilock.commands.executors.verilock.identity;
 
-import com.github.larryr1.verilock.Verilock;
 import com.github.larryr1.verilock.commands.executors.SubCommand;
 import com.github.larryr1.verilock.data.importing.IdentityImportResult;
 import com.github.larryr1.verilock.data.importing.IdentityImporter;

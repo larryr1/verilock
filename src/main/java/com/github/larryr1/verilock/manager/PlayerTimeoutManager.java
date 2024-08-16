@@ -9,7 +9,7 @@ import java.util.*;
 
 public class PlayerTimeoutManager {
 
-    private static Map<UUID, Integer> playerTimeouts = new HashMap<UUID, Integer>();
+    private static final Map<UUID, Integer> playerTimeouts = new HashMap<>();
 
     /**
      * Creates a Runnable to kick the specified player after timeInTicks ticks.
@@ -18,14 +18,10 @@ public class PlayerTimeoutManager {
      */
     public static void addPlayerTimeout(Player player, Integer timeInTicks) {
 
-        Integer taskId = Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Verilock.getInstance(), new Runnable() {
+        Integer taskId = Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Verilock.getInstance(), () -> {
+            playerTimeouts.remove(player.getUniqueId());
+            player.kickPlayer(ChatColor.YELLOW + "You have been disconnected for idling while not verified.\nPlease rejoin and try again.");
 
-            @Override
-            public void run() {
-                playerTimeouts.remove(player.getUniqueId());
-                player.kickPlayer(ChatColor.YELLOW + "You have been disconnected for idling while not verified.\nPlease rejoin and try again.");
-
-            }
         }, timeInTicks);
 
         playerTimeouts.put(player.getUniqueId(), taskId);
