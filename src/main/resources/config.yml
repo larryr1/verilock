@@ -1,0 +1,29 @@
+# Verilock Config
+
+verificationWorldName: verilock
+verificationX: 0
+verificationY: 0
+verificationZ: 0
+
+spawnWorldName: world
+
+# LuckPerms Integration
+permissions:
+  # Node to give to player once verified
+  verifiedPermission: group.verified
+
+  permissionByHouse:
+    zeu: group.zeus
+    pos: group.poseidon
+    hes: group.hestia
+    are: group.ares
+    ath: group.athena
+
+  permissionByGrade:
+    grade-12: group.12th-grade
+    grade-11: group.11th-grade
+    grade-10: group.10th-grade
+    grade-9: group.9th-grade
+    grade-8: group.8th-grade
+    grade-7: group.7th-grade
+    grade-6: group.6th-grade

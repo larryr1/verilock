@@ -1,0 +1,28 @@
+name: Verilock
+version: '${project.version}'
+main: com.github.larryr1.verilock.Verilock
+api-version: '1.20'
+prefix: Verilock
+load: STARTUP
+authors: [larryr1]
+description: Authenticate new players with their SIS information.
+
+depend:
+  - LuckPerms
+
+commands:
+  verify:
+    description: Triggers the demo conversation prompt.
+    usage: /verify
+    permission: verilock.verify
+    permission-message: You don't have permission to use this command.
+  verilock:
+    description: Provides management commands for the plugin.
+    usage: /verilock
+    permission: verilock.manage
+    permission-message: You don't have permission to use this command.
+  verilockdb:
+    description: Provides a direct interface to the Verilock database.
+    usage: /verilockdb
+    permission: verilock.db
+    permission-message: You don't have permission to use this command.
